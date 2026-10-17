@@ -1,0 +1,302 @@
+/* =========================================
+   Navbar – clean, light, matches dashboard theme
+========================================= */
+
+.school-navbar {
+  --nav-ink: #0f172a;
+  --nav-text: #475569;
+  --nav-muted: #64748b;
+  --nav-line: #e2e8f0;
+  --nav-accent: #1d4ed8;
+  --nav-accent-dark: #1e3a8a;
+  --nav-accent-soft: #eff4ff;
+
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  width: 100%;
+  min-height: 64px;
+  padding: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--nav-line);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.school-navbar .container-fluid {
+  min-height: 64px;
+}
+
+/* ---------- Brand ---------- */
+
+.school-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: var(--nav-ink);
+  text-decoration: none;
+}
+
+.school-brand:hover {
+  color: var(--nav-ink);
+}
+
+.school-brand-icon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--nav-accent);
+  color: #fff;
+}
+
+.school-brand-icon i {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.school-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.school-brand-text strong {
+  color: var(--nav-ink);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.school-brand-text small {
+  color: var(--nav-muted);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* ---------- Links ---------- */
+
+.school-nav-links {
+  align-items: center;
+  gap: 4px;
+}
+
+.school-nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 0 12px !important;
+  border-radius: 8px;
+  color: var(--nav-text);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.school-nav-link i {
+  font-size: 15px;
+}
+
+.school-nav-link:hover {
+  background: #f1f5f9;
+  color: var(--nav-ink);
+}
+
+.school-nav-link.active {
+  background: var(--nav-accent-soft);
+  color: var(--nav-accent);
+  font-weight: 600;
+}
+
+/* ---------- Actions ---------- */
+
+.school-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.school-add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--nav-accent);
+  border-radius: 8px;
+  background: var(--nav-accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.school-add-btn:hover,
+.school-add-btn:focus {
+  border-color: var(--nav-accent-dark);
+  background: var(--nav-accent-dark);
+  color: #fff;
+}
+
+.school-nav-divider {
+  width: 1px;
+  height: 28px;
+  background: var(--nav-line);
+}
+
+/* ---------- Admin profile ---------- */
+
+.school-admin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.school-admin-avatar {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--nav-accent-soft);
+  color: var(--nav-accent-dark);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.school-admin-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.school-admin-info strong {
+  color: var(--nav-ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.school-admin-info small {
+  color: var(--nav-muted);
+  font-size: 12px;
+}
+
+/* ---------- Logout ---------- */
+
+.school-logout-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--nav-line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--nav-text);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.school-logout-btn i {
+  font-size: 15px;
+}
+
+.school-logout-btn:hover:not(:disabled) {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.school-logout-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* ---------- Mobile toggle ---------- */
+
+.school-toggler {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--nav-line);
+  border-radius: 8px;
+  color: var(--nav-ink);
+  font-size: 20px;
+  box-shadow: none !important;
+}
+
+.school-toggler:hover {
+  background: #f1f5f9;
+}
+
+/* ---------- Focus ---------- */
+
+.school-navbar a:focus-visible,
+.school-navbar button:focus-visible {
+  outline: 3px solid rgba(29, 78, 216, 0.35);
+  outline-offset: 2px;
+}
+
+/* ---------- Tablet & mobile ---------- */
+
+@media (max-width: 991.98px) {
+  .school-navbar .container-fluid {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .school-nav-links {
+    align-items: stretch;
+    gap: 2px;
+    margin: 14px 0 10px;
+  }
+
+  .school-nav-link {
+    min-height: 42px;
+  }
+
+  .school-nav-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 0 4px;
+    border-top: 1px solid var(--nav-line);
+  }
+
+  .school-nav-divider {
+    display: none;
+  }
+
+  .school-add-btn,
+  .school-logout-btn {
+    width: 100%;
+    min-height: 42px;
+  }
+
+  .school-admin {
+    order: -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .school-nav-link,
+  .school-add-btn,
+  .school-logout-btn {
+    transition: none;
+  }
+}

@@ -1,0 +1,42 @@
+
+body {
+  margin: 0;
+  background-color: #f4f6f9;
+  color: #212529;
+  font-family: "Google Sans Flex", "Google Sans", sans-serif;
+}
+
+.navbar-brand {
+  letter-spacing: 0.3px;
+}
+
+.nav-link {
+  margin-left: 10px;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.form-control {
+  padding: 11px 12px;
+}
+
+.btn {
+  border-radius: 7px;
+}
+
+.table th,
+.table td {
+  padding: 14px;
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 12px !important;
+  }
+
+  .nav-link {
+    margin-left: 0;
+  }
+}
